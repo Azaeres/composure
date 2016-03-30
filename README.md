@@ -35,7 +35,7 @@ Hypriot Raspberry Pi image
 
 ### Get the Debian install package for Docker
 
-#### Manually build debian pkg
+##### Manually build debian pkg
 
 ```
   # Build debian package for ARM Docker
@@ -45,7 +45,7 @@ Hypriot Raspberry Pi image
   ./run-builder.sh
 ```
 
-#### Alternative: Download debian pkg
+##### Alternative: Download debian pkg
 
 [https://packagecloud.io/Hypriot/Schatzkiste/packages/debian/wheezy/docker-hypriot_1.10.3-1_armhf.deb](https://packagecloud.io/Hypriot/Schatzkiste/packages/debian/wheezy/docker-hypriot_1.10.3-1_armhf.deb)
 
