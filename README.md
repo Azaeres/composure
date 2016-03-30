@@ -9,17 +9,19 @@ Hypriot Raspberry Pi image
       > Nodejs, system API service (wraps OS, docker and docker-compose)
       > OAuth2 service
       > Notification system
-      > Caddy static proxy server
-      > Home screen (run, uninstall apps)
-        - Lock screen (Log in)
+      > Caddy static proxy server [https://composure]
+      > Lock screen (Log in) [https://lock.composure]
+      > Home screen (run, uninstall apps) [https://home.composure]
         - List of installed apps (both lite and heavy apps)
         - List of running apps (quit apps)
         - System control (sleep, restart, shut down, log out)
         - Notification panel
-      > Personal App store (install heavy apps)
-      > Web Browser-within-a-browser (install static apps)
-      > Settings
-      > { ...User-installed heavy app containers... }
+      > Personal App store (install heavy apps) [https://apps.composure]
+      > Web Browser-within-a-browser (install static apps) [https://browse.composure]
+      > Settings [https://settings.composure]
+        - Mapping apps to app ids
+        - Scoping notifications
+      > { ...User-installed heavy app containers... } [https://{appid}.composure]
 ```
 
 ### Docker install package
