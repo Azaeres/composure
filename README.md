@@ -29,7 +29,11 @@ Hypriot Raspberry Pi image
       > { ...User-installed heavy app containers... } [https://{appid}.composure]
 ```
 
-### Docker install package
+### Raspberry Pi image
+
+[http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
+
+### Get the Debian install package for Docker
 
 #### Manually build debian pkg
 
