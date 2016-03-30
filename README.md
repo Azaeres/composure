@@ -1,15 +1,20 @@
 # Composure App Platform
 
+```
 Hypriot RPi image
   Raspbian
-    * Nodejs, Docker Compose API service
-    * Docker (web app environment)
-      > App store (install apps)
-      > Home screen (run, uninstall apps)
-      > Running apps list (quit apps)
+    * Docker container (web app environment)
+      > Nodejs, system API service (wraps OS, docker and docker-compose)
+      > Home screen (run, uninstall apps, quit apps)
+      > Personal App store (install heavy apps)
+      > Web Browser (install static apps)
+      > Settings
+      > Notification system
+```
 
+### Docker install package
 
-### Manually build debian pkg
+#### Manually build debian pkg
 
 ```
   # Build debian package for ARM Docker
@@ -19,17 +24,16 @@ Hypriot RPi image
   ./run-builder.sh
 ```
 
-### Download debian pkg
+#### Alternative: Download debian pkg
 
 [https://packagecloud.io/Hypriot/Schatzkiste/packages/debian/wheezy/docker-hypriot_1.10.3-1_armhf.deb](https://packagecloud.io/Hypriot/Schatzkiste/packages/debian/wheezy/docker-hypriot_1.10.3-1_armhf.deb)
 
-### Copy file over to Raspbian
-
 ```
+# Copy file over to Raspbian
 scp /Users/ryancbarry/Downloads/docker-hypriot_1.10.3-1_armhf.deb root@192.168.1.103:/root/pkg/docker-hypriot_1.10.3-1_armhf.deb
 ```
 
-### Create container
+### Create main system container
 
 ```
 docker pull hypriot/rpi-node
@@ -40,7 +44,7 @@ docker pull hypriot/rpi-node
 docker run --name api-server --privileged -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /root/pkg/:/root/pkg/ -ti 286e53bda778 bash
 ```
 
-### Install
+### Install docker inside main system container
 
 ```
 apt-get update && apt-get install \
@@ -53,7 +57,7 @@ apt-get update && apt-get install \
 dpkg -i /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
 ```
 
-### Server
+### Set up and start the API server
 
 ```
 cat << EOF >> server.js
@@ -83,7 +87,7 @@ node server.js
 ```
 
 
-### Dockerfile:
+### Protoype Dockerfile
 
 ```
 FROM hypriot/rpi-node:latest
