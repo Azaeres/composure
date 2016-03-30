@@ -8,19 +8,19 @@ Hypriot Raspberry Pi image
     * SSH daemon
     * Docker daemon
       > Caddy static proxy server
-      > Main system docker container (privileged container) [https://system.composure]
+      > Main system docker container (privileged container) [https://system.composure] (API has accompanying app toolkit)
         * Docker client
         * SSH client
         * Nodejs, system API service (exposes OS and app-related actions to the client)
           - Uses docker client, docker-compose, ssh client
-      > Notification system [https://notifications.composure]
-      > Clipboard system [https://clipboard.composure]
+      > Notification system [https://notifications.composure] (API has accompanying app toolkit)
+      > Clipboard system [https://clipboard.composure] (API has accompanying app toolkit)
       > Home screen [https://composure]
         - List of installed apps (both lite and heavy apps, run, uninstall apps)
         - List of running apps (quit apps)
         - System control (sleep, restart, shut down, log out)
         - Notification panel
-      > OAuth2 service (token and session management API) [https://lock.composure]
+      > OAuth2 service (token and session management API) [https://lock.composure] (API has accompanying app toolkit)
         - Lock screen (Log in)
       > Personal App store (install both lite and heavy apps) [https://apps.composure]
         - Everyone hosts their own personal app store.
