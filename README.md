@@ -5,9 +5,12 @@
 ```
 Hypriot Raspberry Pi image
   Raspbian
-    * Docker container (web app environment)
-      > Nodejs, system API service (wraps OS, docker and docker-compose)
-      > OAuth2 service
+    * Docker daemon
+    * Main system docker container
+      > Nodejs, system API service (exposes OS and app-related actions to the client)
+        - docker client
+        - docker-compose
+      > OAuth2 service (token and session management)
       > Notification system
       > Caddy static proxy server [https://composure]
       > Lock screen (Log in) [https://lock.composure]
