@@ -1,5 +1,7 @@
 # Composure App Platform
 
+### Architecture
+
 ```
 Hypriot RPi image
   Raspbian
@@ -10,6 +12,7 @@ Hypriot RPi image
       > Web Browser (install static apps)
       > Settings
       > Notification system
+      > { ...User-installed apps... }
 ```
 
 ### Docker install package
