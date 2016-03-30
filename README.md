@@ -151,3 +151,18 @@ dpkg -i /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
 ```
 https://github.com/armhf-docker-library/caddy
 ```
+
+## Roadmap
+
+  * Build and host (Github) a control package for the main system container.
+    - Dockerfile
+    - docker-hypriot_1.10.3-1_armhf.deb
+    - server.js
+    - docker-compose.yml
+  
+  * Build and host (Docker hub) a Docker image from the control package.
+  
+  * Build and host (CDN) a Raspberry Pi micro SD card image that comes loaded with everything running.
+    
+  
+
