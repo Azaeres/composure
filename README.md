@@ -48,6 +48,14 @@ Hypriot Raspberry Pi image
 
 [Download a site's manifest files](https://www.npmjs.com/package/manifest)
 
+[Inspect docker status](https://www.npmjs.com/package/dockerode)
+
+[Execute a unix command with Node.js](https://dzone.com/articles/execute-unix-command-nodejs)
+
+[Portable unix shell commands for Node.js](https://github.com/shelljs/shelljs)
+
+[Run a remote command via SSH](http://www.cyberciti.biz/faq/unix-linux-execute-command-using-ssh/)
+
 ### Raspberry Pi image
 
 [http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
