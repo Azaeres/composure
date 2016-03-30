@@ -94,7 +94,7 @@ node server.js
 
 ```
 FROM hypriot/rpi-node:latest
-MAINTAINER Ryan Barry <rbarry@cyberu.com>
+MAINTAINER Ryan Barry <azaeres@gmail.com>
 
 COPY /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
 dpkg -i /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
