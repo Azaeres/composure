@@ -8,6 +8,7 @@ Hypriot Raspberry Pi image
     * Docker container (web app environment)
       > Nodejs, system API service (wraps OS, docker and docker-compose)
       > Home screen (run, uninstall apps)
+        - List of installed apps (both lite and heavy apps)
         - List of running apps (quit apps)
         - System control (sleep, restart, shut down)
       > Personal App store (install heavy apps)
