@@ -7,7 +7,10 @@ Hypriot Raspberry Pi image
   Raspbian
     * SSH daemon
     * Docker daemon
-      > Caddy static proxy server
+      > Caddy server
+        - Intercepts all https://{appid}.composure requests, proxies them to apps.
+        - Serves the static files that've been cached during a lite app install.
+        - Proxies requests for heavy apps to the app's main service.
       > Main system docker container (privileged container) [https://system.composure] (API has accompanying app toolkit)
         * Docker client
         * SSH client
