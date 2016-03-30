@@ -9,7 +9,7 @@ Hypriot Raspberry Pi image
       > Nodejs, system API service (wraps OS, docker and docker-compose)
       > Home screen (run, uninstall apps, quit apps)
       > Personal App store (install heavy apps)
-      > Web Browser (install static apps)
+      > Web Browser-within-a-browser (install static apps)
       > Settings
       > Notification system
       > { ...User-installed apps... }
