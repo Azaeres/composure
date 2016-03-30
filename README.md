@@ -13,8 +13,10 @@ Hypriot Raspberry Pi image
         * SSH client
         * Nodejs, system API service (exposes OS and app-related actions to the client)
           - Uses docker client, docker-compose, ssh client
-      > Data transfer between apps (includes user clipboard, data import/exports, app notifications) [https://transfer.composure] (API 
-          has accompanying app toolkit)
+      > Inter-app pubsub system [https://transfer.composure] (API has accompanying app toolkit)
+        - User clipboard
+        - Data import/exports
+        - App notifications
       > Home screen [https://composure]
         - List of installed apps (both lite and heavy apps, run, uninstall apps)
         - List of running apps (quit apps)
