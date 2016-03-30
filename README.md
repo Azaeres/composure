@@ -9,6 +9,7 @@ Hypriot Raspberry Pi image
       > Nodejs, system API service (wraps OS, docker and docker-compose)
       > OAuth2 service
       > Notification system
+      > Caddy static proxy server
       > Home screen (run, uninstall apps)
         - Lock screen (Log in)
         - List of installed apps (both lite and heavy apps)
