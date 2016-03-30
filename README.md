@@ -7,15 +7,18 @@ Hypriot Raspberry Pi image
   Raspbian
     * Docker container (web app environment)
       > Nodejs, system API service (wraps OS, docker and docker-compose)
+      > OAuth2 service
+      > Notification system
       > Home screen (run, uninstall apps)
+        - Lock screen (Log in)
         - List of installed apps (both lite and heavy apps)
         - List of running apps (quit apps)
-        - System control (sleep, restart, shut down)
+        - System control (sleep, restart, shut down, log out)
+        - Notification panel
       > Personal App store (install heavy apps)
       > Web Browser-within-a-browser (install static apps)
       > Settings
-      > Notification system
-      > { ...User-installed apps... }
+      > { ...User-installed heavy app containers... }
 ```
 
 ### Docker install package
