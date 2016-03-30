@@ -3,7 +3,7 @@
 ### Architecture
 
 ```
-Hypriot RPi image
+Hypriot Raspberry Pi image
   Raspbian
     * Docker container (web app environment)
       > Nodejs, system API service (wraps OS, docker and docker-compose)
