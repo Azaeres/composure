@@ -41,7 +41,7 @@ Hypriot Raspberry Pi image
       > Settings [https://settings.composure]
         - Mapping apps to app ids
         - Scoping notifications
-      > { ...User-installed heavy app containers... } [https://{appid}.composure]
+      > { User-installed apps, both lite and heavy } [https://{appid}.composure]
 ```
 
 [A Beginner's Guide to Using the Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/)
