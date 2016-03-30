@@ -14,6 +14,7 @@ Hypriot Raspberry Pi image
         * Nodejs, system API service (exposes OS and app-related actions to the client)
           - Uses docker client, docker-compose, ssh client
       > Notification system [https://notifications.composure]
+      > Clipboard system [https://clipboard.composure]
       > Home screen [https://composure]
         - List of installed apps (both lite and heavy apps, run, uninstall apps)
         - List of running apps (quit apps)
