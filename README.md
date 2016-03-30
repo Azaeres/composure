@@ -45,6 +45,7 @@ Hypriot Raspberry Pi image
 ```
 
 [A Beginner's Guide to Using the Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/)
+[Download a site's manifest files](https://www.npmjs.com/package/manifest)
 
 ### Raspberry Pi image
 
