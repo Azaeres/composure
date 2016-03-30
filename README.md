@@ -17,6 +17,7 @@ Hypriot Raspberry Pi image
         * Nodejs, system API service (exposes OS and app-related actions to the client)
           - Uses docker client, docker-compose, ssh client
       > Inter-app pubsub system [https://transfer.composure] (API has accompanying app toolkit)
+        - Supports webhooks and websockets.
         - User clipboard
         - Data import/exports
         - App notifications
