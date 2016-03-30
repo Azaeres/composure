@@ -12,10 +12,10 @@ Hypriot Raspberry Pi image
         * SSH client
         * Nodejs, system API service (exposes OS and app-related actions to the client)
           - Uses docker client, docker-compose, ssh client
-      > OAuth2 service (token and session management)
       > Notification system
       > Caddy static proxy server [https://composure]
-      > Lock screen (Log in) [https://lock.composure]
+      > OAuth2 service (token and session management API)
+        - Lock screen (Log in) [https://lock.composure]
       > Home screen (run, uninstall apps) [https://home.composure]
         - List of installed apps (both lite and heavy apps)
         - List of running apps (quit apps)
