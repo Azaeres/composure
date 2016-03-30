@@ -5,11 +5,13 @@
 ```
 Hypriot Raspberry Pi image
   Raspbian
+    * SSH daemon
     * Docker daemon
-    * Main system docker container
-      > Nodejs, system API service (exposes OS and app-related actions to the client)
-        - docker client
-        - docker-compose
+      > Main system docker container (privileged container)
+        * Docker client
+        * SSH client
+        * Nodejs, system API service (exposes OS and app-related actions to the client)
+          - Uses docker client, docker-compose, ssh client
       > OAuth2 service (token and session management)
       > Notification system
       > Caddy static proxy server [https://composure]
