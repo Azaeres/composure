@@ -33,12 +33,13 @@ Hypriot Raspberry Pi image
               config files, etc. Docker compose projects are registered as heavy apps by their maintainers.
             - Lite apps: JSON file containing url to site, which contains an HTML5 manifest (icons, list of files 
               to cache, etc. Web sites are registered as lite apps by users when they're known to work from a web archive.
-              [http://www.html5rocks.com/en/tutorials/appcache/beginner/](http://www.html5rocks.com/en/tutorials/appcache/beginner/)
       > Settings [https://settings.composure]
         - Mapping apps to app ids
         - Scoping notifications
       > { ...User-installed heavy app containers... } [https://{appid}.composure]
 ```
+
+[A Beginner's Guide to Using the Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/)
 
 ### Raspberry Pi image
 
