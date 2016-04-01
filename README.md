@@ -89,7 +89,7 @@ docker pull hypriot/rpi-node
 ```
 
 ```
-docker run --name api-server --privileged -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v /root/pkg/:/root/pkg/ -ti 286e53bda778 bash
+docker run --name system --privileged -p 8000:8000 -v /root/pkg/:/root/pkg/ -ti 286e53bda778 bash
 ```
 
 ### Install docker inside main system container
@@ -104,6 +104,14 @@ apt-get update && apt-get install \
 
 dpkg -i /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
 ```
+
+```
+cd /root
+git clone https://github.com/jpetazzo/dind.git
+cd dind
+sudo ./wrapdocker
+```
+
 
 ### Set up and start the API server
 
