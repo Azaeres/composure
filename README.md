@@ -100,8 +100,7 @@ apt-get update && apt-get install \
     ca-certificates \
     curl \
     lxc \
-    iptables \
-    nano
+    iptables
 
 dpkg -i /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
 ```
