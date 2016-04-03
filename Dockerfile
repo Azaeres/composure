@@ -11,7 +11,11 @@ RUN apt-get update && apt-get install \
     iptables
 
 RUN git clone https://github.com/ryancbarry/composure.git
-RUN dpkg -i /root/composure/system/docker-hypriot_1.10.3-1_armhf.deb
 RUN git clone https://github.com/jpetazzo/dind.git
 
-ENTRYPOINT ["/root/composure/startup.sh"]
+RUN git clone https://github.com/hypriot/rpi-docker-builder.git
+RUN /root/rpi-docker-builder/build.sh
+RUN /root/rpi-docker-builder/run-builder.sh
+RUN dpkg -i /root/rpi-docker-builder/dist/docker-hypriot_1.10.3-1_armhf.deb
+
+ENTRYPOINT ["bash"]
