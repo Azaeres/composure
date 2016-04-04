@@ -74,85 +74,16 @@ docker build .
 ### Run the system container
 
 ```
-docker run --name system --privileged -p 8000:8000 -v /dev:/dev -d {image_id} /root/composure/system/startup.sh
+docker run --name system --privileged -p 8000:8000 -v /dev:/dev -d {image_id}
 
 ```
 
-
-
-
-### Get the Debian install package for Docker
-
-##### Manually build debian pkg
+### Test the system API
 
 ```
-  # Build debian package for ARM Docker
-  git clone https://github.com/hypriot/rpi-docker-builder.git
-  cd rpi-docker-builder
-  ./build.sh
-  ./run-builder.sh
+curl http://localhost:8000
 ```
 
-##### Alternative: Download debian pkg
-
-[https://packagecloud.io/Hypriot/Schatzkiste/packages/debian/wheezy/docker-hypriot_1.10.3-1_armhf.deb](https://packagecloud.io/Hypriot/Schatzkiste/packages/debian/wheezy/docker-hypriot_1.10.3-1_armhf.deb)
-
-```
-# Copy file over to Raspbian
-scp /Users/ryancbarry/Downloads/docker-hypriot_1.10.3-1_armhf.deb root@192.168.1.103:/root/pkg/docker-hypriot_1.10.3-1_armhf.deb
-```
-
-### Create main system container
-
-```
-docker pull hypriot/rpi-node
-  -> (Image: 286e53bda778)
-```
-
-```
-docker run --name system --privileged -p 8000:8000 -v /root/pkg/:/root/pkg/ -ti 286e53bda778 bash
-```
-
-### Install docker inside main system container
-
-```
-apt-get update && apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    lxc \
-    iptables
-
-dpkg -i /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
-```
-
-```
-cd /root
-git clone https://github.com/jpetazzo/dind.git
-cd dind
-sudo ./wrapdocker
-```
-
-
-### Set up and start the API server
-
-```
-cd /root
-git clone https://github.com/ryancbarry/composure.git
-cd composure
-node server.js
-```
-
-### Protoype Dockerfile
-
-```
-FROM hypriot/rpi-node:latest
-MAINTAINER Ryan Barry <azaeres@gmail.com>
-
-COPY /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
-dpkg -i /root/pkg/docker-hypriot_1.10.3-1_armhf.deb
-
-```
 
 ### Static proxy server
 
