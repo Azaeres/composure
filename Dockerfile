@@ -15,4 +15,4 @@ RUN git clone https://github.com/jpetazzo/dind.git
 
 RUN dpkg -i /root/composure/system/docker-hypriot_1.10.3-1_armhf.deb
 
-ENTRYPOINT ["./startup.sh"]
+ENTRYPOINT ["/root/composure/system/startup.sh"]
