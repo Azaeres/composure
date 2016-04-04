@@ -56,9 +56,30 @@ Hypriot Raspberry Pi image
 
 [Run a remote command via SSH](http://www.cyberciti.biz/faq/unix-linux-execute-command-using-ssh/)
 
+
 ### Raspberry Pi image
 
 [http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
+
+
+### Build the system docker image
+
+```
+cd /root
+git clone https://github.com/ryancbarry/composure.git
+cd composure
+docker build .
+```
+
+### Run the system container
+
+```
+docker run --name system --privileged -p 8000:8000 -v /dev:/dev -d {image_id} /root/composure/system/startup.sh
+
+```
+
+
+
 
 ### Get the Debian install package for Docker
 
