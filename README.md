@@ -8,25 +8,30 @@ Hypriot Raspberry Pi image
     * SSH daemon
     * Docker daemon
       > Caddy server
+        - Exposes port 80
         - Intercepts all https://{appid}.composure requests, proxies them to apps.
         - Serves the static files that've been cached during a lite app install.
         - Proxies requests for heavy apps to the app's main service.
       > Main system docker container (privileged container) [https://system.composure] (API has accompanying app toolkit)
-        * Docker client
-        * SSH client
-        * Nodejs, system API service (exposes OS and app-related actions to the client)
+        - Exposes port 8000
+        - Docker client
+        - SSH client
+        - Nodejs, system API service (exposes OS and app-related actions to the client)
           - Uses docker client, docker-compose, ssh client
+      > Home screen [https://composure]
+        - Exposes port 8001
+        - List of installed apps (both lite and heavy apps, run, uninstall apps)
+        - List of running apps (quit apps)
+        - System control (sleep, restart, shut down, log out)
+        - Notification panel
+      > { User-installed apps, both lite and heavy } [https://{appid}.composure]
+        - Port-managed
       > Inter-app pubsub system [https://transfer.composure] (API has accompanying app toolkit)
         - For one-way data flow to any number of apps.
         - Apps can subscribe to messages through webhooks and/or websockets.
         - User clipboard
         - Data import/exports
         - App notifications
-      > Home screen [https://composure]
-        - List of installed apps (both lite and heavy apps, run, uninstall apps)
-        - List of running apps (quit apps)
-        - System control (sleep, restart, shut down, log out)
-        - Notification panel
       > OAuth2 service (token and session management API) [https://lock.composure] (API has accompanying app toolkit)
         - Lock screen (Log in)
       > Personal App store (install both lite and heavy apps) [https://apps.composure]
@@ -41,7 +46,6 @@ Hypriot Raspberry Pi image
       > Settings [https://settings.composure]
         - Mapping apps to app ids
         - Scoping notifications
-      > { User-installed apps, both lite and heavy } [https://{appid}.composure]
 ```
 
 [A Beginner's Guide to Using the Application Cache](http://www.html5rocks.com/en/tutorials/appcache/beginner/)
